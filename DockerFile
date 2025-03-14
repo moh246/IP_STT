@@ -20,7 +20,9 @@ ENV HUGGINGFACE_HUB_CACHE="/runpod-volume/huggingface-cache/hub"
 ENV TRANSFORMERS_CACHE="/runpod-volume/huggingface-cache/hub"
 
 # RunPod expects a handler file, so rename or create one
-COPY STT.py /app/handler.py  # Renaming STT.py to handler.py
+
+COPY ./STT.py /app/handler.py
+
 
 # Set the command to run your handler file
 CMD ["python", "handler.py"]
